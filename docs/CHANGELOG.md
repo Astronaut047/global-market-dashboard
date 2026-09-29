@@ -48,10 +48,23 @@ All notable project changes are documented here. Dates use ISO 8601.
 - Architecture reviewed without creating application code, dependencies, provider credentials, API connections, database infrastructure, or deployment configuration.
 - Local repository verified on `main`; GitHub `origin` is configured and the repository is private.
 
-## [0.3.1] - 2026-09-29
+## [0.4.0] - 2026-09-29
 
-### Changed
+### Added
 
-- Synchronized project documentation with the completed Phase 0–2 state.
-- Updated README, project overview, environment record, and documentation index to distinguish completed work from planned work.
+- Phase 3 frontend scaffold using Next.js App Router, React, TypeScript, and Tailwind CSS.
+- Responsive read-only dashboard with mock global indices, FX, commodities, and crypto data.
+- Reusable market cards, status badges, UI state components, and Lightweight Charts historical mock chart.
+- Routes for `/`, `/markets/[symbol]`, and `/status`.
+- Phase 3 frontend documentation.
+
+### Verification
+
+- Workspace structure and source files inspected.
+- No `.env` files found.
+- `npm run build` passed without errors from the project terminal.
+- `npm run lint` passed without errors from the project terminal.
+- The application was opened successfully in the browser and the Phase 3 routes were available.
+- No `.env*` files were found during workspace inspection.
+- Phase 3 is **COMPLETE**. No Phase 4 work has been started.
 

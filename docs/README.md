@@ -7,6 +7,7 @@ This directory records completed project phases and decisions. Documentation is 
 - [00 — Project overview](00-project-overview.md)
 - [01 — Development environment](01-environment-setup.md)
 - [02 — Project architecture](02-architecture.md)
+- [03 — Frontend setup](03-frontend-setup.md)
 - [Changelog](CHANGELOG.md)
 
 ## Planned phase documents
@@ -17,6 +18,7 @@ Future phase documents will be added only after their corresponding work is impl
 
 - `00-project-overview.md`: project scope and product goals.
 - `01-environment-setup.md`: verified development environment.
-- `02-architecture.md`: Phase 2 design only; no implementation.
+- `02-architecture.md`: Phase 2 architecture and boundaries.
+- `03-frontend-setup.md`: Phase 3 frontend implementation and completed verification status.
 - `CHANGELOG.md`: completed-phase and checkpoint history.
 

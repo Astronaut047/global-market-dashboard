@@ -1,0 +1,46 @@
+{
+  "name": "web-global-market-dashboard",
+  "version": "1.0.0",
+  "description": "A read-only web dashboard for following global market conditions across indices, foreign exchange, commodities, and cryptoassets. It is not a trading platform: the MVP will not provide orders, deposits, withdrawals, portfolios, or execution features.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Astronaut047/global-market-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Astronaut047/global-market-dashboard/issues"
+  },
+  "homepage": "https://github.com/Astronaut047/global-market-dashboard#readme",
+  "dependencies": {
+    "lightweight-charts": "^5.2.1",
+    "next": "^16.3.7",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.7",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3"
+  },
+  "private": true
+}

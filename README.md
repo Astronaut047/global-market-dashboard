@@ -7,8 +7,9 @@ A read-only web dashboard for following global market conditions across indices,
 **Phase 0 — COMPLETE** — project planning.
 **Phase 1 — COMPLETE** — development environment.
 **Phase 2 — COMPLETE** — project architecture (documentation only).
+**Phase 3 — COMPLETE** — frontend implementation uses mock market data only.
 
-No frontend, backend, database, Market API integration, production deployment, or trading/order-execution functionality has been implemented yet.
+No backend, database, Market API integration, production deployment, or trading/order-execution functionality has been implemented.
 
 ## Proposed product principles
 
@@ -57,11 +58,12 @@ See [the documentation index](docs/README.md), including the [Phase 0 project ov
 
 Phase 0 - Project Planning: **COMPLETE**  
 Phase 1 - Development Environment: **COMPLETE**  
-Phase 2 - Project Architecture: **COMPLETE**
+Phase 2 - Project Architecture: **COMPLETE**  
+Phase 3 - Frontend Setup: **COMPLETE**  
 
-There is no frontend implementation, backend implementation, database implementation, Market API integration, production deployment, or trading/order-execution functionality.
+Phase 3 contains frontend source code and mock market data only. There is no backend, database, Market API integration, production deployment, or trading/order-execution functionality.
 
 ## Current next step
 
-**Phase 3 - Frontend Setup** has not started and requires explicit approval.
+**Phase 3 - Frontend Setup** is complete. See [the Phase 3 frontend setup record](docs/03-frontend-setup.md). `npm run build` and `npm run lint` passed, and the dashboard was verified in the browser.
 
