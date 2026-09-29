@@ -10,7 +10,7 @@ A read-only web dashboard for viewing global market conditions across indices, f
 **Phase 3 — COMPLETE** — frontend implementation using local mock market data.  
 **Phase 4 — COMPLETE** — server-side market-data foundation using a Mock Market Data Provider.  
 **Phase 5 — COMPLETE** — interactive macro dashboard, mock logistics panel, and CSV export.  
-**Phase 6 — IMPLEMENTATION COMPLETE / VERIFICATION PENDING** — quality and UX hardening.
+**Phase 6 — COMPLETE** — quality and UX hardening with verified lint/build.
 
 ## Current data mode
 
@@ -87,7 +87,7 @@ npm run build
 
 Phase 5 was verified successfully with both commands and the production build generated 18 static pages.
 
-Phase 6 implementation is complete, but its final lint/build verification is still pending.
+Phase 6 was verified successfully with both commands. The production build completed successfully and the verified Phase 6 commit was pushed to the private GitHub repository.
 
 ## Documentation
 

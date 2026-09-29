@@ -2,7 +2,7 @@
 
 ## Status
 
-**Implementation Complete / Verification Pending**
+**COMPLETE**
 
 Phase 6 hardens the existing read-only dashboard without adding live market integrations or trading functionality.
 
@@ -82,8 +82,8 @@ components/ui/ui-state.tsx
 - [x] Error state has accessible alert semantics
 - [x] No external market-data API added
 - [x] No live-data claim added
-- [ ] Final `npm run lint`
-- [ ] Final `npm run build`
+- [x] Final `npm run lint`
+- [x] Final `npm run build`
 
 ## Verification
 
@@ -94,8 +94,8 @@ npm run lint
 npm run build
 ```
 
-The Phase 6 checkpoint should only be marked complete after both commands succeed.
+Both verification commands completed successfully during the Phase 6 checkpoint.
 
 ## Phase 6 conclusion
 
-The quality and UX hardening implementation is complete. Terminal verification is the remaining checkpoint before the Phase 6 Git commit.
+The quality and UX hardening implementation and terminal verification are complete. The verified Phase 6 commit `69a2f63` was pushed to the private GitHub repository.
