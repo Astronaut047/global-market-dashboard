@@ -36,12 +36,7 @@ Git was initially unavailable because it was not installed. Windows Package Mana
 
 The machine-level PATH includes the Git command directory. The PowerShell process that initiated installation did not refresh its inherited PATH, so a newly opened terminal may be needed before `git` resolves by name. This does not affect the verified executable or the initialized repository.
 
-No global Git `user.name` or `user.email` is configured. This phase intentionally did not invent an author identity. Configure it before the first commit, for example:
-
-```powershell
-git config --global user.name "Your Name"
-git config --global user.email "you@example.com"
-```
+Git identity was configured after this phase using the user's GitHub account identity and GitHub's private `users.noreply.github.com` address before the first commit. The exact address is intentionally not recorded in project documentation.
 
 ## Environment configuration performed
 
@@ -68,10 +63,6 @@ git config --global user.email "you@example.com"
 - `.nvmrc` — pin for the verified Node.js version.
 - `docs/01-environment-setup.md` — this environment record.
 - `docs/CHANGELOG.md` — Phase 1 entry.
-
-## Next phase
-
-**Phase 2 — Project Architecture** requires explicit approval. Do not begin it until directed.
 
 ## Current checkpoint verification
 

@@ -11,15 +11,17 @@ It must not include order entry, buy/sell functions, trade execution, deposits, 
 
 ## Current-state inspection
 
-| Area | Result |
-| --- | --- |
-| Workspace contents | Empty; no source code or configuration files found. |
-| Dependencies | None found. |
-| Environment variables | No project configuration found. |
-| Existing documentation | None found. |
-| Git status | Not verified: `git` is unavailable in the current shell. |
+The original Phase 0 inspection found an empty application workspace. The project has since completed Phase 1 and Phase 2; the current repository state is recorded in those phase documents.
 
-No frontend, backend, database, API integration, or application folder was created in this phase.
+| Area | Current result |
+| --- | --- |
+| Application source | None; only documentation and `.nvmrc` exist. |
+| Dependencies | None; no `package.json` or lockfile exists. |
+| Environment variables/secrets | No project secrets or provider credentials. |
+| Documentation | Phase 0, Phase 1, Phase 2, index, and changelog present. |
+| Git | Repository initialized, identity configured, `main` branch, GitHub `origin` configured, private repository. |
+
+No frontend, backend, database, API integration, or market-data connection has been created.
 
 ## Recommended technology stack
 
@@ -133,11 +135,11 @@ Only `README.md` and `docs/` exist after Phase 0.
 | No backend, database, or API integration created | Verified by workspace inspection and phase scope. |
 | Required Phase 0 documents created | Verified: root README, project overview, changelog, and documentation index. |
 | Build/test command | Not applicable: no application or dependency manifest exists yet. |
-| Git status | Not verified: `git` is unavailable in the current shell. |
+| Git status | Verified in Phase 2: branch `main`, clean before checkpoint. |
 
 ## Next phase
 
-**Phase 1 — Development Environment**, pending approval. It will inspect available Node.js/package-manager tooling, establish a reproducible development environment, and document only the setup actually performed.
+**Phase 3 — Frontend Setup**, pending explicit approval. It will create the initial application scaffold while preserving the architecture and security boundaries documented in Phase 2.
 
 ## Current scope checkpoint
 

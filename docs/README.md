@@ -5,14 +5,13 @@ This directory records completed project phases and decisions. Documentation is 
 ## Available documents
 
 - [00 — Project overview](00-project-overview.md)
-- [01 ? Development environment](01-environment-setup.md)
+- [01 — Development environment](01-environment-setup.md)
+- [02 — Project architecture](02-architecture.md)
 - [Changelog](CHANGELOG.md)
 
 ## Planned phase documents
 
-The following documents will be added only after their corresponding phase is implemented and verified:
-
-`02-project-architecture.md` through `14-deployment.md`.
+Future phase documents will be added only after their corresponding work is implemented and verified.
 
 ## Current documentation index
 

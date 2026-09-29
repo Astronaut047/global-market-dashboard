@@ -4,7 +4,11 @@ A read-only web dashboard for following global market conditions across indices,
 
 ## Current status
 
-**Phase 0 complete — planning only.** No frontend, backend, database, API connection, or market data has been created yet.
+**Phase 0 — COMPLETE** — project planning.
+**Phase 1 — COMPLETE** — development environment.
+**Phase 2 — COMPLETE** — project architecture (documentation only).
+
+No frontend, backend, database, Market API integration, production deployment, or trading/order-execution functionality has been implemented yet.
 
 ## Proposed product principles
 
@@ -47,11 +51,7 @@ Directories other than `docs/` are planned only; they have not been created in P
 
 ## Documentation
 
-See [the documentation index](docs/README.md), including the [Phase 0 project overview](docs/00-project-overview.md) and [changelog](docs/CHANGELOG.md).
-
-## Next step
-
-Await approval for **Phase 1 — Development Environment**. That phase will inspect the available local tooling before any project scaffold is chosen or installed.
+See [the documentation index](docs/README.md), including the [Phase 0 project overview](docs/00-project-overview.md), [Phase 1 environment setup](docs/01-environment-setup.md), [Phase 2 architecture](docs/02-architecture.md), and [changelog](docs/CHANGELOG.md).
 
 ## Current checkpoint status
 
@@ -63,5 +63,5 @@ There is no frontend implementation, backend implementation, database implementa
 
 ## Current next step
 
-**Phase 3 - Application Foundation** has not started and requires explicit approval.
+**Phase 3 - Frontend Setup** has not started and requires explicit approval.
 
