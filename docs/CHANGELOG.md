@@ -2,6 +2,49 @@
 
 All notable project changes are documented here. Dates use ISO 8601.
 
+## [0.6.0] - 2026-09-29
+
+### Added
+
+- Interactive Region and Time Horizon controls across the macro dashboard.
+- Mock Supply Chain & Logistics data fixtures.
+- Mock Supply Chain & Logistics dashboard panel.
+- Mock Intelligence Wire horizon context.
+- Browser-side CSV export for the selected dashboard Region and Horizon.
+- Dedicated dashboard export utility.
+
+### Changed
+
+- Connected Supply Chain & Logistics navigation to a functional dashboard panel.
+- Connected Intelligence Wire to the selected Time Horizon context.
+- Data Export now downloads a clearly labelled Mock Dashboard CSV.
+- Dashboard interactions continue to use local fixtures only.
+- Horizon controls do not generate fabricated historical or live observations.
+
+### Files
+
+- Added `data/mock-supply-chain-data.ts`.
+- Added `components/dashboard/supply-chain-panel.tsx`.
+- Added `lib/dashboard-export.ts`.
+- Updated `app/page.tsx`.
+- Updated `components/dashboard/macro-header.tsx`.
+- Updated `components/dashboard/intelligence-wire.tsx`.
+- Updated `README.md`.
+
+### Verification
+
+- Phase 5 implementation is complete.
+- Final Phase 5 `npm run lint` execution has not been performed in the current workspace tool session because no shell/npm runner is available.
+- Final Phase 5 `npm run build` execution has not been performed in the current workspace tool session for the same reason.
+- Run both commands from the project terminal before treating the Phase 5 commit as build-verified.
+
+### Status
+
+- Phase 5 is **IMPLEMENTATION COMPLETE / VERIFICATION PENDING**.
+- No external market-data API is used.
+- No live market-data claim is made.
+- No trading, orders, accounts, portfolio, database, or Redis functionality has been added.
+
 ## [0.5.0] - 2026-09-29
 
 ### Added

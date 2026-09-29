@@ -8,7 +8,8 @@ A read-only web dashboard for viewing global market conditions across indices, f
 **Phase 1 — COMPLETE** — development environment.  
 **Phase 2 — COMPLETE** — project architecture.  
 **Phase 3 — COMPLETE** — frontend implementation using local mock market data.  
-**Phase 4 — IN PROGRESS** — server-side market-data foundation using a Mock Market Data Provider.
+**Phase 4 — COMPLETE** — server-side market-data foundation using a Mock Market Data Provider.  
+**Phase 5 — COMPLETE** — interactive macro dashboard, mock logistics panel, and CSV export.
 
 ## Current data mode
 
@@ -27,7 +28,7 @@ The mock data exists for development, demonstration, and academic evaluation. It
 
 The current server-side data flow is:
 
-\`\`\`
+```
 Browser
    ↓
 Next.js API Route
@@ -37,22 +38,46 @@ Market Data Service
 Mock Market Data Provider
    ↓
 Local Mock Fixtures
-\`\`\`
+```
 
 The provider abstraction keeps the application architecture independent from a specific external market-data vendor.
 
-If real market data becomes a requirement in a future version, a new provider can implement the existing \`MarketDataProvider\` interface. Any future provider would need separate verification of coverage, freshness, licensing, exchange entitlements, rate limits, reliability, and cost.
+If real market data becomes a requirement in a future version, a new provider can implement the existing `MarketDataProvider` interface. Any future provider would need separate verification of coverage, freshness, licensing, exchange entitlements, rate limits, reliability, and cost.
 
-## Current next step
+## Phase 5 dashboard capabilities
 
-Complete Phase 4 verification:
+The dashboard now provides:
 
-1. Run \`npm run lint\`
-2. Run \`npm run build\`
-3. Test a valid market symbol through \`/api/markets\`
-4. Test an invalid market symbol and confirm HTTP \`400\`
-5. Confirm the API response reports \`status: "MOCK"\` and \`source: "Mock Provider"\`
-6. Update the Phase 4 documentation and changelog after verification
-7. Create and push the Phase 4 Git commit
+- Region selection: Global, US, EU, APAC, EM
+- Time-horizon context: 24H, 7D, 1M, YTD
+- Macro KPI cards
+- Central bank matrix
+- Forex matrix
+- Yield curve panel
+- Commodities and resource panel
+- Central bank rate watch
+- Mock Supply Chain & Logistics monitor
+- Mock Intelligence Wire
+- Functional CSV export for the selected Region and Horizon
+- Sticky sidebar navigation with active-section tracking
+- Read-only market search for local mock instruments
+- Clear Mock Data indicators throughout the UI
 
-See [\`docs/04-backend-foundation.md\`](docs/04-backend-foundation.md) for the detailed Phase 4 documentation.
+The selected Horizon is intentionally a **view context**, not a generated historical series. The project does not fabricate historical observations or live market updates.
+
+## Verification status
+
+The project contains the following verification commands:
+
+```bash
+npm run lint
+npm run build
+```
+
+Phase 4 was previously verified successfully with both commands and API smoke tests.
+
+Phase 5 implementation is complete, but the current workspace tool session does not provide a shell/npm execution command, so the final Phase 5 lint/build run has **not been executed in this session**. Do not treat Phase 5 as build-verified until those commands are run from the project terminal.
+
+## Documentation
+
+See the `docs/` directory for phase-specific documentation and the changelog.
