@@ -138,3 +138,9 @@ Only `README.md` and `docs/` exist after Phase 0.
 ## Next phase
 
 **Phase 1 — Development Environment**, pending approval. It will inspect available Node.js/package-manager tooling, establish a reproducible development environment, and document only the setup actually performed.
+
+## Current scope checkpoint
+
+The planned data types are global indices, foreign exchange, commodities, cryptocurrencies, market status, timestamp, data source, and LIVE/DELAYED/UNAVAILABLE state. None is connected yet.
+
+The product remains read-only: it accepts no orders or deposits and has no portfolio or order execution.

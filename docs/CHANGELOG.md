@@ -34,3 +34,11 @@ All notable project changes are documented here. Dates use ISO 8601.
 - Provider coverage, licensing, freshness, and commercial terms have not been validated for a selected plan.
 - Git status could not be checked because `git` is unavailable in the current shell.
 
+
+## [0.3.0] - 2026-09-29
+
+### Added
+
+- Phase 2 architecture for the read-only market dashboard.
+- Provider abstraction, realtime, cache, security, deployment, and testing design.
+
