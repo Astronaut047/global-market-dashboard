@@ -2,7 +2,7 @@
 
 ## Status
 
-**Implementation Complete / Verification Pending**
+**COMPLETE**
 
 Phase 5 extends the read-only mock dashboard with interactive Region and Time Horizon controls, functional CSV export, a Mock Supply Chain & Logistics panel, and expanded Intelligence Wire context.
 
@@ -187,16 +187,14 @@ npm run lint
 npm run build
 ```
 
-The current workspace tool session does not expose a shell/npm execution command, so Phase 5 lint and build verification have not been executed in this session.
-
-Before committing Phase 5 as fully verified, run:
+Phase 5 was verified from the project terminal with both commands completing successfully:
 
 ```bash
 npm run lint
 npm run build
 ```
 
-from the project terminal.
+The Next.js production build compiled successfully, completed TypeScript checking, collected page data, and generated 18 static pages.
 
 ## Acceptance checklist
 
@@ -212,9 +210,9 @@ from the project terminal.
 - [x] No live market feed added
 - [x] No external API added
 - [x] No fabricated historical series added
-- [ ] Final `npm run lint`
-- [ ] Final `npm run build`
+- [x] Final `npm run lint`
+- [x] Final `npm run build`
 
 ## Phase 5 conclusion
 
-The Phase 5 implementation is complete. The remaining step is local terminal verification with ESLint and Next.js production build before creating the Phase 5 Git commit.
+The Phase 5 implementation and terminal verification are complete. The verified commit was pushed to the private GitHub repository.

@@ -2,6 +2,34 @@
 
 All notable project changes are documented here. Dates use ISO 8601.
 
+## [0.7.0] - 2026-09-29
+
+### Added
+
+- Phase 6 quality and UX hardening documentation.
+- Updated system-status runtime summary for the Mock Provider architecture.
+- Accessible loading, empty, and error state semantics.
+
+### Changed
+
+- Updated `/status` to remove the outdated Phase 3 wording.
+- Replaced obsolete `--panel` references in reusable UI state components with current dashboard design tokens.
+- Added clearer runtime messaging for Mock data, no external API, no database, and trading-disabled scope.
+- Updated documentation index and README with Phase 6 status.
+
+### Verification
+
+- Phase 6 implementation is complete.
+- Final `npm run lint` is pending terminal verification.
+- Final `npm run build` is pending terminal verification.
+
+### Status
+
+- Phase 6 is **IMPLEMENTATION COMPLETE / VERIFICATION PENDING**.
+- No external market-data API is used.
+- No live-data claim is made.
+- No trading, orders, accounts, portfolio, database, or Redis functionality has been added.
+
 ## [0.6.0] - 2026-09-29
 
 ### Added

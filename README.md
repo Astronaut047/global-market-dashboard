@@ -9,7 +9,8 @@ A read-only web dashboard for viewing global market conditions across indices, f
 **Phase 2 — COMPLETE** — project architecture.  
 **Phase 3 — COMPLETE** — frontend implementation using local mock market data.  
 **Phase 4 — COMPLETE** — server-side market-data foundation using a Mock Market Data Provider.  
-**Phase 5 — COMPLETE** — interactive macro dashboard, mock logistics panel, and CSV export.
+**Phase 5 — COMPLETE** — interactive macro dashboard, mock logistics panel, and CSV export.  
+**Phase 6 — IMPLEMENTATION COMPLETE / VERIFICATION PENDING** — quality and UX hardening.
 
 ## Current data mode
 
@@ -28,7 +29,7 @@ The mock data exists for development, demonstration, and academic evaluation. It
 
 The current server-side data flow is:
 
-```
+```text
 Browser
    ↓
 Next.js API Route
@@ -65,6 +66,16 @@ The dashboard now provides:
 
 The selected Horizon is intentionally a **view context**, not a generated historical series. The project does not fabricate historical observations or live market updates.
 
+## Phase 6 quality improvements
+
+The project now includes:
+
+- Updated System Status page matching the current Phase 6 runtime
+- Consistent Mock Provider and no-live-feed messaging
+- Accessible loading, empty, and error state semantics
+- Current design-token usage across reusable UI state components
+- Removal of obsolete `--panel` references from the reusable UI state components
+
 ## Verification status
 
 The project contains the following verification commands:
@@ -74,9 +85,9 @@ npm run lint
 npm run build
 ```
 
-Phase 4 was previously verified successfully with both commands and API smoke tests.
+Phase 5 was verified successfully with both commands and the production build generated 18 static pages.
 
-Phase 5 implementation is complete, but the current workspace tool session does not provide a shell/npm execution command, so the final Phase 5 lint/build run has **not been executed in this session**. Do not treat Phase 5 as build-verified until those commands are run from the project terminal.
+Phase 6 implementation is complete, but its final lint/build verification is still pending.
 
 ## Documentation
 
