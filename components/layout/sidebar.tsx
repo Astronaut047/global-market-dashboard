@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navigation = [
   { label: "Overview", href: "#overview", target: "overview", icon: "⌂" },
@@ -15,23 +15,44 @@ const navigation = [
 
 export function Sidebar() {
   const [activeSection, setActiveSection] = useState("overview");
+  const isProgrammaticScroll = useRef(false);
+  const navigationTarget = useRef<string | null>(null);
 
   useEffect(() => {
     const sections = navigation
       .map((item) => document.getElementById(item.target))
       .filter((section): section is HTMLElement => section !== null);
 
+    if (sections.length === 0) {
+      return;
+    }
+
+    let animationFrame = 0;
+
     const updateActiveSection = () => {
-      const scrollPosition = window.scrollY + 140;
-      let current = "overview";
+      if (isProgrammaticScroll.current) {
+        return;
+      }
+
+      const activationLine = 96;
+      let current = sections[0].id;
 
       for (const section of sections) {
-        if (section.offsetTop <= scrollPosition) {
+        if (section.getBoundingClientRect().top <= activationLine) {
           current = section.id;
+        } else {
+          break;
         }
       }
 
-      setActiveSection(current);
+      setActiveSection((previous) =>
+        previous === current ? previous : current,
+      );
+    };
+
+    const handleScroll = () => {
+      cancelAnimationFrame(animationFrame);
+      animationFrame = requestAnimationFrame(updateActiveSection);
     };
 
     const handleHashChange = () => {
@@ -45,11 +66,12 @@ export function Sidebar() {
     updateActiveSection();
     handleHashChange();
 
-    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("hashchange", handleHashChange);
 
     return () => {
-      window.removeEventListener("scroll", updateActiveSection);
+      cancelAnimationFrame(animationFrame);
+      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
@@ -57,10 +79,34 @@ export function Sidebar() {
   const handleNavigation = (target: string) => {
     const section = document.getElementById(target);
 
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.replaceState(null, "", `#${target}`);
-      setActiveSection(target);
+    if (!section) {
+      return;
+    }
+
+    isProgrammaticScroll.current = true;
+    navigationTarget.current = target;
+    setActiveSection(target);
+    window.history.replaceState(null, "", `#${target}`);
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    const releaseNavigationLock = () => {
+      if (navigationTarget.current === target) {
+        isProgrammaticScroll.current = false;
+        navigationTarget.current = null;
+        setActiveSection(target);
+      }
+    };
+
+    if ("onscrollend" in window) {
+      window.addEventListener("scrollend", releaseNavigationLock, {
+        once: true,
+      });
+    } else {
+      setTimeout(releaseNavigationLock, 800);
     }
   };
 
